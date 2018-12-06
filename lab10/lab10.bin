@@ -1,0 +1,54 @@
+; This is the file you will use for the lab assignment
+; Make sure to comment your code properly and don't exceed 
+; the line limitation for this assignment.  Good luck!
+
+; Name: Achanta Shamith; Date: 11/15/2018
+; Purpose: from 10 given 2's complement numbers, add all positive numbers and store the result in R5
+
+; The program description and code starts here
+
+; Here we are using R3 as pointer which pointer to the address of the number to be added
+; R2 is the register which stores value in the address pointed by R3
+; R4 is the counter which makes sure that we count the given 10 numbers
+; R5 is used to store the sum of the positive numbers (result)
+
+0011 0001 0000 0000 ; x3100 - starting address of the program
+
+0101 011 011 1 00000 ; initialize R3 to 0 by ANDING R3 with x0000
+0101 010 010 1 00000 ; initialize R2 to 0 by ANDING R2 with x0000
+0101 100 100 1 00000 ; initialize R4 to 0 by ANDING R4 with x0000
+0001 100 100 1 01010 ; R4 <- xA (setting R4 to 10) because R4 should count 10
+0101 101 101 1 00000 ; initialize R5 to 0 by ANDING R5 with x0000
+
+; Storing the address of the first number
+1110 011 000101100; R3 <- x3132 (R3 <- PC + x2C) 
+
+; Storing number whose address was pointed by R3 in R2
+0110 010 011 000000; R2 <- M[R3] and line = 7 
+
+; if number in R2 < 0, go to line 10
+0000 100 000000001; if R2 < 0: PC <- PC + x0001
+
+; if number is positive, add number to R5
+0001 101 101 0 00 010; R5 <- R5 + R2
+
+; incrementing pointer(R3) by 1 so that it points to the next address
+0001 011 011 1 00001;  R3 <- R3 + x0001 and line = 10
+
+; decrementing counter(R4) by 1 (counting backwards)
+0001 100 100 1 11111 ; R4 <- R4 + x1111
+
+; if R4 is not equal to zero, go to line 7
+0000 101 111111010 ; if R4 != 0: PC <- PC + xFFFA
+
+; if R4 == 0, halt the program (we have gone through all the 10 numbers)
+1111 0000 0010 0101  ; halt
+
+
+
+
+
+
+
+
+
