@@ -1,0 +1,26 @@
+Question 1: Describe the errors that occur when trying to assemble lab11.asm. Identify the cause of each error.
+
+Answer 1: 	In Line 16, .ORIG was not written
+		In Line 19, R2 was assigned to store contents of an unknown address ,which was out of range, and not -1
+		In Line 21, the syntax of the code was wrong; there was an additional comma
+		In Line 32, R5 was assigned to store contents of an unknown address ,which was out of range, and not 0
+		In Line 34, BRpz was written instead of BRzp
+		In Line 37, final answer was stored in an arbitary address and not in 'result'
+		In Line 46, .END was not written
+        
+
+
+Question 2: For each label in the code, write down the corresponding memory location. 
+
+Answer 2:	INPUT     : x300E
+		OUTERLOOP : x3004
+		INNERLOOP : x3005
+		RESULT    : x300C
+
+
+
+Question 3: Between using labels and explicit memory locations/offsets, which one makes the most sense, and why?
+
+Answer 3:	Using labels makes it easier to understand and debug the code rather than using explicit memory locations/offsets.
+		Finding explicit memory locations tends to be cumbersome since calculating then lead to errors. 
+		Thus, it makes more sense to use labels instead of explicit memory locations/offsets.	
