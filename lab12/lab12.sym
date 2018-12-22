@@ -1,0 +1,21 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	OFFSET            3009
+//	LOAD              300F
+//	BRANCH            3014
+//	ADDN              3018
+//	INCREMENT         3021
+//	NEW_ROW           3023
+//	ROW_FINISH        3027
+//	PRINT             302A
+//	ZERO              302C
+//	ONE               302E
+//	FINISH            3030
+//	NEWLINE           3031
+//	ZERO_BIT          3032
+//	ONE_BIT           3033
+//	RESULT            3034
+//	FONT_DATA         3035
+
