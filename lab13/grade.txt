@@ -1,0 +1,26 @@
+lc3as output:
+STARTING PASS 1
+0 errors found in first pass.
+STARTING PASS 2
+0 errors found in second pass.
+
+"graded/emptystring": 0
+"graded/gibberish": passed
+"graded/registers": passed
+"graded/singlecharacter": passed
+"graded/voldemort": passed
+Proper halt: 5/5
+Functionality total: 45
+
+Single iterative construct to print every line of output: 10/10
+Single iterative construct to print every character in string: 10/10
+Single iterative construct to print every bit in a character: 10/10
+Single conditional construct to select character for printing: 5/5
+Style total: 35/35
+
+Introductory paragraph: 0/5
+Table of registers with explanation: 5/5
+Clear and well-commented code: 5/5
+Comments total: 10/15
+
+Total: 90/100
